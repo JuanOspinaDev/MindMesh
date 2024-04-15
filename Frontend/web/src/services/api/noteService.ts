@@ -9,10 +9,9 @@ interface NoteResponse {
     noteid: number;
     title: string;
     content: string;
-    create_date?: string; // Añadir cualquier otro campo que devuelva tu API
+    create_date?: string; 
 }
 
-// Asegúrate de que esta URL coincida con la ruta configurada en tu backend.
 const API_URL = 'http://localhost:8080/notas';
 
 export const createNote = async (noteData: NoteData): Promise<NoteResponse> => {
@@ -32,7 +31,6 @@ export const createNote = async (noteData: NoteData): Promise<NoteResponse> => {
         const noteResponse: NoteResponse = await response.json();
         return noteResponse;
     } catch (error) {
-        // Aquí es mejor lanzar un error tipado para un mejor manejo del mismo.
         throw new Error('Error al comunicarse con la API');
     }
 };
