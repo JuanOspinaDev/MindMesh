@@ -2,10 +2,10 @@
   display: flex;
   flex-direction: row;
   min-height: 100vh;
-  justify-content: center; /* Centra el contenido en el eje principal */
-  align-items: flex-start; /* Centra el contenido en el eje cruzado */
+  justify-content: center; 
+  align-items: flex-start; 
   text-align: center;
-  flex-wrap: wrap; /* Esto permitirá múltiples líneas de elementos */
+  flex-wrap: wrap; 
   margin-top: 4.5rem;
 }
 
