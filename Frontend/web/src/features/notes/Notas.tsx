@@ -14,7 +14,7 @@ const Notas: React.FC = () => {
   const [noteContent, setNoteContent] = useState('');
 
   useEffect(() => {
-    fetchNotes(); // Fetch existing notes on component mount
+    fetchNotes(); 
   }, [fetchNotes]);
 
   const handleSaveNote = async (event: React.FormEvent<HTMLFormElement>) => {

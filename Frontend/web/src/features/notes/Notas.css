@@ -5,18 +5,18 @@
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
     padding: 16px;
     width: 600px;
-    margin: 20px auto 0 auto; /* Asegura que la sección de creación no se mueva */
+    margin: 20px auto 0 auto; 
     position: sticky;
-    top: 0; /* Se pega en la parte superior al hacer scroll */
-    z-index: 10; /* Se asegura que se mantenga por encima de otros elementos */
+    top: 0;
+    z-index: 10; 
   }
   
   .card-container {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     gap: 20px;
-    padding: 0 20px 20px; /* Espacio alrededor de las tarjetas */
-    margin-top: 20px; /* Espacio adicional si es necesario */
+    padding: 0 20px 20px; 
+    margin-top: 20px; 
   }
   
   
@@ -40,7 +40,7 @@
   }
   
   .note-creation-section textarea {
-    resize: none; /* Evita que se cambie el tamaño manualmente */
+    resize: none; 
   }
   
   .custom-button {
@@ -52,6 +52,6 @@
   
   .card-container:empty {
     padding: 0;
-    min-height: 0; /* No hay altura mínima cuando está vacío */
+    min-height: 0; 
   }
   
