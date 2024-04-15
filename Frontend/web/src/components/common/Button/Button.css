@@ -1,0 +1,35 @@
+/* Button.css */
+
+.custom-button {
+    padding: 8px 16px; 
+    font-size: 14px; 
+    background-color: #4285f4;  
+    color: white;
+    border: none; 
+    padding: 10px 20px; 
+    border-radius: 5px;
+    font-size: 16px; 
+    cursor: pointer; 
+    outline: none; 
+    transition: background-color 0.3s, transform 0.3s;  
+  }
+  
+  .custom-button:hover {
+    background-color: #357ae8; 
+    transform: translateY(-2px); 
+  }
+  
+  .custom-button:active {
+    transform: translateY(1px); 
+  }
+  
+  .button-arrow {
+    margin-left: 5px; 
+    display: inline-block; 
+    transition: transform 0.3s;
+  }
+  
+  .custom-button:hover .button-arrow {
+    transform: translateX(5px);
+  }
+  

@@ -1,0 +1,40 @@
+:root {
+    --navbar-background: #ffffff;
+    --icon-background: #3671e9;
+    --icon-size: 2.5rem;
+    --menu-icon-size: 1.5rem;
+    --icon-color: white;
+    --navbar-padding: 0.6rem 0.6rem 0.6rem 0.9rem; 
+    --nav-item-margin: 0.5rem;
+  }
+
+.brand {
+    display: flex;
+    align-items: center;
+    text-decoration: none; 
+
+}
+
+.logo-icon {
+    font-size: var(--icon-size);
+    width: var(--icon-size); 
+    height: var(--icon-size);
+    border-radius: 50%;
+    display: flex;
+    padding: 2px;
+    justify-content: center;
+    align-items: center;
+    background: var(--icon-background);
+    color: var(--icon-color);
+    margin-right: var(--nav-item-margin);
+    margin-left: var(--nav-item-margin); 
+  }
+  
+  
+  .app-title {
+    font-family: "Product Sans",'Roboto', sans-serif;
+    font-size: 1.6rem;
+    font-weight: 400; 
+    margin-left: 0.5rem; 
+    color: #474848; 
+  }

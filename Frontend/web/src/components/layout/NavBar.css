@@ -1,0 +1,177 @@
+:root {
+  --navbar-background: #ffffff;
+  --icon-background: #3671e9;
+  --icon-size: 43px;
+  --menu-icon-size: 1.5rem;
+  --icon-color: white;
+  --navbar-padding: 0.6rem 0.6rem 0.6rem 0.9rem;
+  --nav-item-margin: 0.5rem;
+}
+
+.menu-icon {
+  background: transparent;
+  border: none;
+  font-size: var(--menu-icon-size);
+  color: rgb(73, 73, 74);
+  cursor: pointer;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: var(--icon-size);
+  width: var(--icon-size);
+  border-radius: 50%;
+  transition: background-color 0.3s;
+  margin-right: 0.3rem;
+  margin-left: 0.2rem;
+}
+
+.menu-icon:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.navbar {
+  background-color: var(--navbar-background);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  padding: var(--navbar-padding);
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 100;
+}
+
+.sidebar {
+  position: fixed;
+  left: -270px;
+  top: 0;
+  bottom: 0;
+  width: 270px;
+  background-color: #fff;
+  transition: left 0.3s;
+  z-index: 150;
+}
+
+.sidebar.active {
+  left: 0;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.3);
+}
+
+.sidebar-top {
+  display: flex;
+  align-items: center;
+  padding: var(--navbar-padding);
+  background-color: var(--navbar-background);
+  margin-bottom: 0.5rem;
+}
+
+.sidebar-menu {
+  margin-top: var(
+    --nav-item-margin
+  ); 
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Esto centrará los elementos hijos horizontalmente */
+  padding: 0;
+  width: 100%;
+}
+
+.sidebar-menu li a:hover {
+  background-color: #eaeaea; 
+}
+
+.sidebar-menu li a {
+  justify-content: center; 
+  width: 100%; 
+  padding: 20px 0; 
+  display: flex;
+  font-size: 1.1rem;
+  align-items: center;
+  color: #2d2d2d; 
+  text-decoration: none;
+  width: 100%;
+}
+
+.sidebar-menu li {
+    width: 100%;
+  }
+
+.backdrop {
+  display: block; /* Muestra siempre el backdrop pero usa opacity para ocultarlo */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 100;
+  opacity: 0; /* Inicialmente transparente */
+  visibility: hidden; 
+  transition: opacity 0.5s, visibility 0.5s; /* Suaviza la transición de opacity y visibility */
+
+}
+
+.backdrop.active {
+  display: block;
+  opacity: 1; /* Hace el backdrop visible */
+  visibility: visible;
+}
+
+.navbar-nav {
+  list-style: none;
+  display: flex;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  justify-content: flex-start;
+}
+
+.nav-item {
+  margin-right: var(--nav-item-margin);
+  display: flex;
+  align-items: center;
+  padding: 0px;
+}
+
+.sidebar-menu li .nav-link {
+    justify-content: center;
+    width: 100%;
+    padding: 20px 0;
+    display: flex;
+    font-size: 1.1rem;
+    align-items: center;
+    color: #2d2d2d;
+    text-decoration: none;
+    width: 100%;
+  }
+
+  .sidebar-menu li .nav-link-active {
+    background-color: #f0f0f0;
+  }
+
+.nav-item a {
+  color: var(--icon-color);
+  text-decoration: none;
+  display: flex;
+  padding: 1px;
+  align-items: center;
+}
+
+@media (max-width: 768px) {
+  .navbar-icon {
+    font-size: calc(var(--icon-size) * 0.75);
+    width: calc(var(--icon-size) * 0.75);
+    height: calc(var(--icon-size) * 0.75);
+    margin-right: calc(var(--nav-item-margin) * 0.5);
+  }
+
+  .nav-item {
+    margin-right: calc(var(--nav-item-margin) * 0.5);
+  }
+
+  .navbar {
+    padding: var(--navbar-padding) calc(var(--navbar-padding) * 0.5);
+  }
+}
