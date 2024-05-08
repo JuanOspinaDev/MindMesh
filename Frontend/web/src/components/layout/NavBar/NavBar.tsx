@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './NavBar.css';
-import Brand from './Brand'; 
+import Brand from '../Brand/Brand'; 
 import { CgMenu } from 'react-icons/cg'; 
 import { NavLink } from 'react-router-dom';
 

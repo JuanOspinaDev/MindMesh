@@ -1,0 +1,18 @@
+version: '3.8'
+services:
+  postgres:
+    image: postgres:latest
+    container_name: postgres_note_app
+    ports:
+      - "5432:5432"  # Puerto por defecto de PostgreSQL
+    environment:
+      POSTGRES_USER: 'juanospina'  # Sustituye 'tu_usuario' con tu usuario deseado
+      POSTGRES_PASSWORD: 'juanjose123'  # Sustituye 'tu_contraseña' con tu contraseña deseada
+      POSTGRES_DB: 'notes_db'  # Nombre de la base de datos que quieres crear automáticamente
+    volumes:
+      - postgres_data:/var/lib/postgresql/data  # Volumen para persistir los datos
+
+volumes:
+  postgres_data:
+    driver: local
+
